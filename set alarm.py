@@ -1,5 +1,6 @@
 import datetime
 import tkinter as tk
+import tkinter.simpledialog
 
 class AlarmClock:
     def __init__(self, master):
@@ -17,7 +18,7 @@ class AlarmClock:
 
     def set_alarm(self):
         self.alarm_set = True
-        self.alarm_time = tk.simpledialog.askstring("Set Alarm", "Enter time in HH:MM format:")
+        self.alarm_time = tkinter.simpledialog.askstring("Set Alarm", "Enter time in HH:MM format:")
         self.alarm_time_label.config(text=f"Alarm set for {self.alarm_time}")
 
     def check_alarm(self):
